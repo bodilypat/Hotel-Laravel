@@ -1,0 +1,30 @@
+/* src/pages/rooms/rooms.css */ 
+
+.rooms-container {
+    padding: 20px;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+}
+.rooms-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.rooms-header h1 {
+    font-size: 24px;
+    color: #343a40;
+}
+.rooms-header button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.rooms-header button:hover {
+    background-color: #0056b3;
+}
+
+
