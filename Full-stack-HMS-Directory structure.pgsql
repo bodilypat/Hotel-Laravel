@@ -70,7 +70,11 @@ Full-stack-Hotel-Management-System/
 │   │   ├── api.php
 │   │   └── web.php
 │   ├── storage/ 
+│   │   ├── framework/
+│   │   │   └── maintenance.php
+│   │   └── web.php
 │   ├── Bootstrap/ 
+│   │   └── app.php
 │   ├── public/    
 │   │   └── index.php                                              # Laravel entry point
 │   ├── .env
