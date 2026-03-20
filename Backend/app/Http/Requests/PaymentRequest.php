@@ -1,11 +1,11 @@
-<!-- app/Http/Requests/AuthRequest.php 
-| -- This request class handles validation for authentication-related actions. 
-| -->
+<!-- app/Http/Controllers/PaymentRequest.php 
+| -- T
+-->
 <?php
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
-class AuthRequest extends FormRequest
+class PaymentRequest extends FormRequest
 {
     public function authorize()
     {
@@ -15,8 +15,10 @@ class AuthRequest extends FormRequest
     public function rules()
     {
         return [
-            'email' => 'required|email',
-            'password' => 'required|string',
+            'booking_id' => 'required|exists:bookings,id',
+            'amount' => 'required|numeric',
+            'payment_method' => 'required|string|max:255',
         ];
     }
 }
+
