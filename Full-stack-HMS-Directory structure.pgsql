@@ -38,12 +38,15 @@ Full-stack-Hotel-Management-System/
 │   │   │	├── PaymentFactory.php
 │   │   │   └── 
 │   │   ├── Migrations/
-│   │   │	├── Booking.php   
-│   │   │	├── Payment.php
-│   │   │	├── Customer.php
-│   │   │	├── payment.php
+│   │   │	├── 2026_03_20_000000_create_users_table.php
+│   │   │	├── 2026_03_20_000001_create_rooms_table.php 
+│   │   │	├── 2026_03_20_000002_create_booking_table.php
+│   │   │	├── 2026_03_20_000003_create_payments_table.php 
 │   │   │   └── 
-│   │   └── web.php
+│   │   ├── Seeders/
+│   │   │	├── DatabaseSeeder.php
+│   │   │   └── 
+│   │   └── 
 │   ├── routes/    
 │   │   ├── api.php
 │   │   └── web.php
