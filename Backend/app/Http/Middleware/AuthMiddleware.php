@@ -1,5 +1,5 @@
-<!-- app/Http/Middleware/AdminMiddleware.php 
- | --
+<!-- app/Http/Middleware/AuthMiddleware.php 
+| --
  -->
 <?php
 
@@ -9,7 +9,7 @@ use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class AdminMiddleware
+class AuthMiddleware
 {
     /**
      * Handle an incoming request.
@@ -20,13 +20,13 @@ class AdminMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
-        // Check if the user is authenticated and has the 'admin' role
-        if (Auth::check() && Auth::user()->role === 'admin') {
+        // Check if the user is authenticated
+        if (Auth::check()) {
             return $next($request);
         }
 
-        // If not an admin, redirect to home or show an error
-        return redirect('/')->with('error', 'You do not have admin access.');
+        // If not authenticated, redirect to login page
+        return redirect('/login')->with('error', 'Please log in to access this page.');
     }
 }
 
