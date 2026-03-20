@@ -1,38 +1,58 @@
 Full-stack-Hotel-Management-System/
 ├── backend/   (Laravel)                           
 │   │      
-│   ├── app/    
-│   │   ├── config/                                        
-│   │   │  	├── dbConnect.php
-│   │   │  	└── 
-│   │   │ 
+│   ├── app/     
 │   │   ├── Http/  
 │   │   │	├── Controllers/
-│   │   │	│   ├── AuthController.php
-│   │   │	│   ├── RoomController.php
-│   │   │	│   ├── BookingController.php          
-│   │   │	│   ├── PaymentController.php
-│   │   │   │   └── 
+│   │   │   │   └── API/
+│   │   │	│       ├── AuthController.php
+│   │   │	│       ├── RoomController.php
+│   │   │	│       ├── BookingController.php
+│   │   │	│       ├── PaymentController.php
+│   │   │   │       └── Customer.php
 │   │   │	├── Requests/  
-│   │   │	│   ├── AuthRequest.php 
-│   │   │	│   ├── RoomRequest.php
-│   │   │	│   ├── BookingRequest.php
-│   │   │	│   ├── PaymentRequest.php
-│   │   │	│   ├── Customer.php
+│   │   │	│   ├── Auth/ 
+│   │   │	│   │   ├── LoginRequest.php
+│   │   │   │   │   └── RegisterRequest.php
+│   │   │	│   ├── Room/
+│   │   │	│   │   ├── StoreRoomRequest.php
+│   │   │   │   │   └── UpdateRoomRequest.php
+│   │   │	│   ├── Booking/
+│   │   │	│   │   ├── StoreBookingRequest.php
+│   │   │   │   │   └── UpdateBookingRequest.php
+│   │   │	│   ├── Payment/
+│   │   │   │   │   └── StorePaymentRequest.php
+│   │   │	│   ├── Customer/
 │   │   │   │   └── 
-│   │   │	├── Middleware/   
-│   │   │   ├── 
+│   │   │   └── Middleware/
+│   │   │	    ├── AdminMiddleware.php
+│   │   │       └── AuthMiddleware.php
+│   │   ├── Services/                             # Business Logic layer
+│   │   │	├── BookingService.php
+│   │   │	├── PaymentService.php
+│   │   │	├── RoomService.php
 │   │   │   └── 
-│   │   └── Models/
-│   │   	├── User.php
-│   │    	├── Room.php
-│   │   	├── Booking.php   
-│   │   	├── Payment.php
-│   │   	├── Customer.php
+│   │   ├── Models/                             
+│   │   │	├── User.php
+│   │   │	├── Room.php
+│   │   │	├── Booking.php
+│   │   │	├── Payment.php
+│   │   │   └── 
+│   │   ├── Repositories/                        # Data abstraction layer (optional but pro)
+│   │   │	├── RoomRepository.php
+│   │   │	├── BookingRepository.php
+│   │   │	├── PaymentRepository.php
+│   │   │   └── 
+│   │   └── Providers/
+│   │   	├── 
 │   │       └── 
+│   ├── config/    
+│   │   ├── app.php
+│   │   ├── database.php
+│   │   └── service.php
 │   ├── database/    
 │   │   ├── Factories/
-│   │   │	├── userFactory.php
+│   │   │	├── UserFactory.php
 │   │   │	├── RoomFactory.php
 │   │   │	├── BookingFactory.php
 │   │   │	├── PaymentFactory.php
@@ -40,16 +60,20 @@ Full-stack-Hotel-Management-System/
 │   │   ├── Migrations/
 │   │   │	├── 2026_03_20_000000_create_users_table.php
 │   │   │	├── 2026_03_20_000001_create_rooms_table.php 
-│   │   │	├── 2026_03_20_000002_create_booking_table.php
+│   │   │	├── 2026_03_20_000002_create_bookings_table.php
 │   │   │	├── 2026_03_20_000003_create_payments_table.php 
 │   │   │   └── 
 │   │   ├── Seeders/
 │   │   │	├── DatabaseSeeder.php
 │   │   │   └── 
-│   │   └── 
+│   │   └── schema.sql
 │   ├── routes/    
 │   │   ├── api.php
 │   │   └── web.php
+│   ├── storage/ 
+│   ├── Bootstrap/ 
+│   ├── public/    
+│   │   └── index.php
 │   ├── .env
 │   └── server.js            
 │  
