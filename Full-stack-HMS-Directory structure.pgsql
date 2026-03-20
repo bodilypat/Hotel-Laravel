@@ -9,7 +9,7 @@ Full-stack-Hotel-Management-System/
 │   │   │	│       ├── RoomController.php
 │   │   │	│       ├── BookingController.php
 │   │   │	│       ├── PaymentController.php
-│   │   │   │       └── Customer.php
+│   │   │   │       └── CustomerController.php
 │   │   │	├── Requests/  
 │   │   │	│   ├── Auth/ 
 │   │   │	│   │   ├── LoginRequest.php
@@ -22,12 +22,11 @@ Full-stack-Hotel-Management-System/
 │   │   │   │   │   └── UpdateBookingRequest.php
 │   │   │	│   ├── Payment/
 │   │   │   │   │   └── StorePaymentRequest.php
-│   │   │	│   ├── Customer/
 │   │   │   │   └── 
 │   │   │   └── Middleware/
 │   │   │	    ├── AdminMiddleware.php
 │   │   │       └── AuthMiddleware.php
-│   │   ├── Services/                             # Business Logic layer
+│   │   ├── Services/                                              # Business Logic layer
 │   │   │	├── BookingService.php
 │   │   │	├── PaymentService.php
 │   │   │	├── RoomService.php
@@ -37,8 +36,8 @@ Full-stack-Hotel-Management-System/
 │   │   │	├── Room.php
 │   │   │	├── Booking.php
 │   │   │	├── Payment.php
-│   │   │   └── 
-│   │   ├── Repositories/                        # Data abstraction layer (optional but pro)
+│   │   │   └── Customer.php
+│   │   ├── Repositories/                                           # Data abstraction layer (optional but pro)
 │   │   │	├── RoomRepository.php
 │   │   │	├── BookingRepository.php
 │   │   │	├── PaymentRepository.php
@@ -46,7 +45,7 @@ Full-stack-Hotel-Management-System/
 │   │   └── Providers/
 │   │   	├── 
 │   │       └── 
-│   ├── config/    
+│   ├── config/                                                     # correct place (NOT inside app/)
 │   │   ├── app.php
 │   │   ├── database.php
 │   │   └── service.php
@@ -73,7 +72,7 @@ Full-stack-Hotel-Management-System/
 │   ├── storage/ 
 │   ├── Bootstrap/ 
 │   ├── public/    
-│   │   └── index.php
+│   │   └── index.php                                              # Laravel entry point
 │   ├── .env
 │   └── server.js            
 │  
