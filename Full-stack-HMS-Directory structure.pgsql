@@ -72,7 +72,7 @@ Full-stack-Hotel-Management-System/
 │   ├── storage/ 
 │   │   ├── framework/
 │   │   │   └── maintenance.php
-│   │   └── web.php
+│   │   └── 
 │   ├── Bootstrap/ 
 │   │   └── app.php
 │   ├── public/    
