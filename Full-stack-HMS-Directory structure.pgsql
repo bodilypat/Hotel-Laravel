@@ -38,9 +38,14 @@ Full-stack-Hotel-Management-System/
 │   │   │	├── Payment.php
 │   │   │   └── Customer.php
 │   │   ├── Repositories/                                           # Data abstraction layer (optional but pro)
-│   │   │	├── RoomRepository.php
-│   │   │	├── BookingRepository.php
-│   │   │	├── PaymentRepository.php
+│   │   │	├── Interfaces/
+│   │   │	│   ├── RoomRepositoryInterface.php
+│   │   │	│   ├── BookingRepositoryInterface.php
+│   │   │   │   └── PaymentRepositoryInterface.php
+│   │   │	├── Eloquent/
+│   │   │	│   ├── RoomRepository.php
+│   │   │	│   ├── BookingRepository.php
+│   │   │   │   └── PaymentRepository.php
 │   │   │   └── 
 │   │   └── Providers/
 │   │   	├── 
